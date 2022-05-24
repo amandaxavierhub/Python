@@ -1,0 +1,177 @@
+# APRESENTAÇÃO
+
+print('''        \033[1;36;40m                               Olá Seja Bem Vindo(a) ao Game Quiz da Texuga_Do_Mel!
+         Teste seu conhecimento sobre o mundo de Harry Potter em 10 perguntas de múltipla escolha. Será que você consegue?
+          \033[1;31m ===Digite apenas letras===\033[m ''')
+answer_user = input('\033[4;36m EU JURO SOLENEMENTE NÃO FAZER NADA DE BOM. (s/n:)\033[m \n ').strip()
+if answer_user != 's':
+    print("Obrigado por participar")
+    quit()
+
+score = 0
+
+print('\033[7;36;41m Vamos a questão de número 1:\033[m \n ')
+
+# PRIMEIRA QUESTÃO
+
+print('\033[1;35m Qual o mascote que reprensenta a casa da Lufa-Lufa? \n '
+      '(A) Leão Marinho \n (B) Texugo \n (C) Leão\033[m ')
+
+answer_user1 = input('\033[1;36m A resposta é ?\033[m \n ').strip()
+answer_user1 = answer_user1.upper()
+if answer_user1 == 'B':
+    print('\033[1;34m Está correto!\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você errou. Essa tava facíl, hein?\033[m')
+##################################################################################################
+# SEGUNDA QUESTÃO
+
+print('\033[7;36;41m Questão de número 2:\033[m \n')
+print('\033[1;35m Qual foi a primeira relíquia da Morte que Rony Wesley usou? \n '
+      '(A) Varinha das Varinhas \n (B) Espada de '
+      'Gryffindor \n '
+      '(C) Capa da Invisibilidade \033[m')
+
+answer_user2 = input('\033[1;36m Que resposta você daria ?\033[m \n').strip()
+answer_user2 = answer_user2.upper()
+if answer_user2 == 'C':
+    print('\033[1;34m Acertou!\033[m  \n')
+    score = score + 1
+else:
+    print('\033[1;31m Errado!\033[m \n')
+################################################################################################
+
+# TERCEIRA QUESTÃO
+
+print('\033[7;36;41m Questão de número 3:\033[m \n')
+print('\033[1;35m Quem foram os fundadores de Hogwarts? \n (A) Helga Hufflepuff, Batilda Ravenclaw, Severo Salazar, '
+      'Doumb Gryffindor \n '
+      '(B) Salazar Slytherin, Helga Hufflepuff, Rowena Ravenclaw, Godric Gryffindor \n (C) Olivaras Gryngots, '
+      'Salazar Sonerina, '
+      'Rowena Ravenwood, Gryffindor\033[m ')
+
+answer_user3 = input('\033[1;36m Qual a sua resposta?\033[m \n').strip()
+answer_user3 = answer_user3.upper().strip()
+if answer_user3 == 'B':
+    print('\033[1;34m Muito bem! Você é realmente um bruxo.\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você é um trouxa xD\033[m \n')
+#############################################################################################
+
+# QUARTA QUESTÃO
+print('\033[7;36;41m Questão de número 4 :\033[m  \n')
+print('\033[1;35m Qual o bichinho de estimação da Gina Wesley? \n (A) Mine-Pufe \n (B) Coruja \n (C) Sapo\033[m ')
+
+answer_user4 = input('\033[1;36m A resposta correta é...?\033[m \n').strip()
+answer_user4 = answer_user4.upper()
+if answer_user4 == 'A':
+    print('\033[1;34m Você sabe tudo\033[m \n ')
+    score = score + 1
+else:
+    print('\033[1;31m Releia o livro por favor!\033[m')
+#######################################################################################
+
+# QUINTA QUESTÃO
+
+print('\033[7;36;41m Questão de número 5: \033[m \n')
+print('\033[1;35m Que criatura só é vista por aqueles que já presenciaram a morte? \n '
+      '(A) Hipogrifo \n (B) Esfinge \n (C) '
+      'Testrálios \033[m ')
+
+answer_user5 = input('\033[1;36mA resposta é ?\033[m \n ').strip()
+answer_user5 = answer_user5.upper()
+if answer_user5 == 'C':
+    print('\033[1;34m Acertou! Você já sentiu a morte?\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você errou.\033[m \n')
+############################################################################################
+
+# SEXTA QUESTÃO
+
+print('\033[7;36;41m Questão de número 6: \033[m \n')
+print('\033[1;35m No livro "A Pedra Filosofal", que criatura Hagrid ganhou de'
+      ' um viajante suspeito e que nome ele lhe deu? \n'
+      ' (A) Cérbero? O cão dos Infernos \n '
+      '(B) Norberto - Um Dragão \n (C) Aragogue -Uma Acromântula \033[m ')
+
+answer_user6 = input('\033[1;36m A Resposta correta é...\033[m \n').strip()
+answer_user6 = answer_user6.upper()
+if answer_user6 == 'B':
+    print('\033[1;34m Newt Scamander teria orgulho!\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você foi expulso da aula "Trato da Criaturas Mágicas!\033[m \n')
+###########################################################################################
+
+# SÉTIMA QUESTÃO
+
+print('\033[7;36;41m Questão de número 7:\033[m \n')
+print('\033[1;35m Qual a sala que se modificava de acordo com a nesseciade'
+      ' de quem a usava? \n (A) Sala da Exatidão \n (B) Sala '
+      'Suspensa '
+      '\n (C) Sala Precisa \033[m ')
+
+answer_user7 = input('\033[1;36m Escolha a letra correta...\033[m \n').strip()
+answer_user7 = answer_user7.upper()
+if answer_user7 == 'C':
+    print('\033[1;34m HIHIHI! Andou aprontando por lá, né?\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você é mesmo desinformado!\033[m \n')
+#########################################################################
+
+# OITAVA QUESTÃO
+
+print('\033[7;36;41m Questão de número 8:\033[m \n')
+print('\033[1;35m "Dos bruxos da sua idade, você é o/a mais inteligente!" \n'
+      'A quem foi dito essa frase? \n (A) Harry Potter \n (B) Luna Lovegood \n (C) Hermione Granger \033[m ')
+
+answer_user8 = input('\033[1;36m Qual a letra correta?\033[m ').strip()
+answer_user8 = answer_user8.upper()
+if answer_user8 == 'C':
+    print('\033[1;34m Ela é mesmo inteligente, não é mesmo?\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Bem, com certeza não foi dita a você!\033[m \n')
+##############################################################################
+
+# NONA QUESTÃO
+
+print('\033[7;36;41m Questão de número 9:\033[m ')
+print \
+    ('\033[1;35m Qual das maldições imperdoavéis foi usada contra os pais de Neville Langbotom? \n (A) Avada Kedrava '
+     '\n (B) '
+     'Cruciatus \n (C) Imperius\033[m ')
+
+answer_user9 = input('\033[1;36m Qual a resposta?\033[m \n').strip()
+answer_user9 = answer_user9.upper()
+if answer_user9 == 'B':
+    print('\033[1;34m Essa maldição é mesmo imperdoavél!\033[m \n')
+    score = score + 1
+else:
+    print('\033[1;31m Você errou, mas fico feliz por não a conhecer.\033[m')
+
+print('\033[7;36;41m Questão de número 10\033[m \n')
+print('\033[1;35m Quem foi Albus Percival Wulfrico Brian Dumbledore?'
+      ' \n (A) O Maior Bruxo que o mundo já conheceu \n (B) O '
+      'Criador da Relíquias '
+      'da Morte?\n '
+      '(C) O diretor de Hogwarts \033[m ')
+
+answer_user10 = input('\033[1;36m Essa você não pode errar:\033[m \n').strip()
+answer_user10 = answer_user10.upper()
+if answer_user10 == 'A':
+    print('\033[1;33m O Maior de todos, Sim!\033[m \n')
+    score = score + 1
+elif answer_user10 == 'C':
+    print('\033[1;34m Sim, mas poderia ser perfeito!\033[m\n')
+    score = score + 1
+else:
+    print('\033[1;31m Avada Kedrava!!!\033[m \n')
+print(f'\033[37m Você acertou : {score}/10\033[m \n')
+
+print("                                Obrigado pela sua participação.")
+print("                                 \033[1;31m MALFEITO, FEITO!\033[m")
