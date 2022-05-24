@@ -1,6 +1,6 @@
 # APRESENTAÇÃO
 
-print('''        \033[1;36;40m                               Olá Seja Bem Vindo(a) ao Game Quiz da Texuga_Do_Mel!
+print('''        \033[1;36;40m                               Olá Seja Bem Vindo(a) ao Game Quiz da Texuga Do Mel!
          Teste seu conhecimento sobre o mundo de Harry Potter em 10 perguntas de múltipla escolha. Será que você consegue?
           \033[1;31m ===Digite apenas letras===\033[m ''')
 answer_user = input('\033[4;36m EU JURO SOLENEMENTE NÃO FAZER NADA DE BOM. (s/n:)\033[m \n ').strip()
