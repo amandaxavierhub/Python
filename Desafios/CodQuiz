@@ -142,14 +142,14 @@ else:
 
 print('\033[7;36;41m Questão de número 9:\033[m ')
 print \
-    ('\033[1;35m Qual das maldições imperdoavéis foi usada contra os pais de Neville Langbotom? \n (A) Avada Kedrava '
+    ('\033[1;35m Qual das maldições imperdo foi usada contra os pais de Neville Langbotom? \n (A) Avada Kedrava '
      '\n (B) '
      'Cruciatus \n (C) Imperius\033[m ')
 
 answer_user9 = input('\033[1;36m Qual a resposta?\033[m \n').strip()
 answer_user9 = answer_user9.upper()
 if answer_user9 == 'B':
-    print('\033[1;34m Essa maldição é mesmo imperdoavél!\033[m \n')
+    print('\033[1;34m Essa maldição é mesmo imperdoável!\033[m \n')
     score = score + 1
 else:
     print('\033[1;31m Você errou, mas fico feliz por não a conhecer.\033[m')
