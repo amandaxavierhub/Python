@@ -142,7 +142,7 @@ else:
 
 print('\033[7;36;41m Questão de número 9:\033[m ')
 print \
-    ('\033[1;35m Qual das maldições imperdo foi usada contra os pais de Neville Langbotom? \n (A) Avada Kedrava '
+    ('\033[1;35m Qual das maldições imperdoáveis foi usada contra os pais de Neville Langbotom? \n (A) Avada Kedrava '
      '\n (B) '
      'Cruciatus \n (C) Imperius\033[m ')
 
