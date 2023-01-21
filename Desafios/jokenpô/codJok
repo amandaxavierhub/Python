@@ -2,184 +2,67 @@ from random import randint
 from time import sleep
 
 #apresentando game
-score = 0
-print('\033[1;37;46m=\033[m'*100)
 print('')
 print('')
 print(f'\033[1;33m{" TEXUGA__Do__Mel 🍯":*^100}\033[m')
 print('                                            \033[1;36m APRESENTA\033[m')
 print('                                          \033[1;33m JO \033[m \033[1;31m '
       'KEN \033[m \033[1;35m PÔ \033[m')
-
-print('\033[1;37;46m=\033[m'*100)
-
-#introdução
-print('''\033[1;36m Nesse Game divertido você será convidado por MK para um desafio de jokenpô em busca da GLÓRIA.
- Você terá apenas 3 chances para escolher entre "Pedra", "Papel" e "Tesoura" e cada rodada
- valerá 10 pontos. Será que você consegue combater MK
- e chegar até o final?.\033[m''')
 print()
 #inicio gameplay
+name = str(input('\033[1;36m Digite o seu nome para começar: \033[m '))
 
-print(f'{"PRIMEIRA RODADA":=^60}')
-inicio = str(input('\033[0;33m E ai, Vai encarar? s/n \033[m'))
-if inicio.lower() == 's':
-    print('\033[1;33m LET´S GO!')
-    print('Você primeiro...\033[m')
-elif inicio == 'n':
-    print('\033[0;37mBem, quem sabe na proxíma.\033[m')
-    quit()
-elif inicio != 's' != 'n':
-    print('\033[1;31mComando Inválido.\033[m')
-    quit()
+print(f'''\033[1;34mOlá {name}! Seu adversário será PC. Divirta-se!\033[m ''')
+sleep(0.7)
+resposta = "S"
+score = cont = mk = 0
+while resposta in "Ss": 
+    print('''\033[1;36m=================================
+    1 - Pedra
+    2 - Papel
+    3 - Tesoura
+    ''')
+    pc = randint(1,3)
+    player = int(input('Faça a sua escolha: \033[m'))
+    
+    print('\033[1;33m JO\033[m')
+    sleep(1)
+    print('\033[1;31m KEN \033[m')
+    sleep(1)
+    print('\033[1;35m PÔ\033[m')
 
-lista = ('Pedra', 'Papel','Tesoura')
-print('\033[1;36mSuas opções são \n [0] Pedra \n [1] Papel \n [2] Tesoura\033[m')
-player = int(input('\033[1;33mQual você escolhe?\033[m '))
-if player !=0 and player != 1 and player != 2:
-     print('Opção Inválida')
-mk = randint(0,2)
-print('\033[1;33m JO\033[m')
-sleep(1)
-print('\033[1;31m KEN \033[m')
-sleep(1)
-print('\033[1;35m PÔ\033[m')
+    if pc == 1:
+        if player == 1:
+            print('\033[1;33m Empate.\033[m')
+        if player == 2:
+            print(f'\033[1;32m {name} ganhou a rodada.\033[m')
+            score += 10
+        if player == 3:
+            print('\033[1;34m Pc ganhou a rodada.\033[m')
+            mk += 10
 
-print(f'\033[1;36mVocê escolheu {lista[player]}\033[m')
-print(f'\033[1;31mMK escolheu {lista[mk]}\033[m')
-
-#condições
-
-
-if mk == 0:
-    if player == 0:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 1:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\033[m')
-    elif player == 2:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada. \033[m')
-    else:
-        print('')
-if mk == 1:
-    if player == 1:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 0:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada.\033[m')
-    elif player == 2:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\033[m')
-    else:
-        print('')
-if mk == 2:
-    if player == 2:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 0:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\33[m')
-    elif player == 1:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada.\033[m')
-    else:
-        print('')
-
-#rodada 2
-print(f'{"SEGUNDA RODADA":=^60}')
-print('')
-print('\033[1;36mSuas opções são \n [0] Pedra \n [1] Papel \n [2] Tesoura\033[m')
-player = int(input('\033[1;33mQual você escolhe?\033[m '))
-if player !=0 and player != 1 and player != 2:
-     print('Opção Inválida')
-mk = randint(0,2)
-print('\033[1;33m JO\033[m')
-sleep(1)
-print('\033[1;31m KEN \033[m')
-sleep(1)
-print('\033[1;35m PÔ\033[m')
-
-print(f'\033[1;36mVocê escolheu {lista[player]}\033[m')
-print(f'\033[1;31mMK escolheu {lista[mk]}\033[m')
-
-#condições
-
-
-if mk == 0:
-    if player == 0:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 1:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\033[m')
-    elif player == 2:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada. \033[m')
-    else:
-        print('')
-if mk == 1:
-    if player == 1:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 0:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada.\033[m')
-    elif player == 2:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\033[m')
-    else:
-        print('')
-if mk == 2:
-    if player == 2:
-        print('\033[1;33m Temos um empate. Proxíma rodada.\033[m')
-    elif player == 0:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez. Proxíma rodada.\33[m')
-    elif player == 1:
-        print('\033[1;34m MK venceu a vez. Proxíma rodada.\033[m')
-    else:
-        print('')
-
-#rodada3
-print(f'{"ÚLTIMA RODADA":=^60}')
-print('\033[1;36mSuas opções são \n [0] Pedra \n [1] Papel \n [2] Tesoura\033[m')
-player = int(input('\033[1;33mQual você escolhe?\033[m '))
-if player !=0 and player != 1 and player != 2:
-     print('Opção Inválida')
-mk = randint(0,2)
-print('\033[1;33m JO\033[m')
-sleep(1)
-print('\033[1;31m KEN \033[m')
-sleep(1)
-print('\033[1;35m PÔ\033[m')
-
-print(f'\033[1;36mVocê escolheu {lista[player]}\033[m')
-print(f'\033[1;31mMK escolheu {lista[mk]}\033[m')
-
-#condições
-
-
-if mk == 0:
-    if player == 0:
-        print('\033[1;33m Temos um empate.\033[m')
-    elif player == 1:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez.\033[m')
-    elif player == 2:
-        print('\033[1;34m MK venceu a vez. \033[m')
-    else:
-        print('')
-if mk == 1:
-    if player == 1:
-        print('\033[1;33m Temos um empate.\033[m')
-    elif player == 0:
-        print('\033[1;34m MK venceu a vez.\033[m')
-    elif player == 2:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez.\033[m')
-    else:
-        print('')
-if mk == 2:
-    if player == 2:
-        print('\033[1;33m Temos um empate.\033[m')
-    elif player == 0:
-        score = score + 10
-        print('\033[1;32m Você venceu a vez.\33[m')
-    elif player == 1:
-        print('\033[1;34m MK venceu a vez.\033[m')
-    else:
-        print('')
-print(f'\033[1;34m Sua pontuação final foi {score} \033[m')
+    if pc == 2:
+        if player == 1:
+            print('\033[1;34mPc ganhou a rodada.\033[m')
+            mk =+10
+        if player == 2:
+            print('\033[1;33m Empate. \033[m')
+        if player == 3:
+            print(f'\033[1;32m {name} ganhou a vez.')
+            score += 10
+    
+    if pc == 3:
+        if player == 1:
+            print(f'\033[1;32m {name} ganhou a rodada. \033[m')
+            score += 10
+        if player == 2:
+            print('\033[1;34mPc ganhou a rodada.\033[m')
+            mk +=10
+        if player == 3:
+            print('\033[1;33m Empate. \o33[m')
+    resposta = str(input('\033[1;37m Gostaria de tentar novamente? [S/N] \033[m')).upper()
+    sleep(0.5)
+    if resposta in 'Ss':
+        cont+=1
+print()
+print(f'\033[31m Jogadas realizadas = {cont +1} \n Pontuação final: \n PC = {mk} \n {name} = {score}\033[m')
