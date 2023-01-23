@@ -20,4 +20,4 @@ print(f'a temperatura de fahrenheit para celsius é de {cel:.2f}°')
 FAR = float(input('temperatura em fahrenheit:'))
 CEL = (FAR - 32)* 5
 TO = CEL / 9
-print(f'A temperatura de {FAR} em graus celsius é de {TO}°')
+print(f'A temperatura de {FAR} em graus celsius é de {TO:.2f}°')
